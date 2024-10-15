@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    
+
+</head>
+<body>
+
+    <div class="toast" id="welcomeToast" style="position: absolute; top: 20px; right: 20px;" data-delay="5000">
+        <div class="toast-header">
+            <strong class="mr-auto">Ey</strong>
+            <i class="fas fa-folder-open"></i>
+
+
+            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="toast-body">
+            Hi, Welcome to my portfolio!
+        </div>
+    </div>
+    
+
+
+    <!-- Main Banner -->
+    <header class="hero-section">
+        <div class="container text-center text-white">
+            <h1 class="hero-title animate-text">Welcome to My Projects</h1>
+            <p class="hero-subtitle">Explore my work as a web developer</p>
+        </div>
+
+        
+    </header>
+
+    <!-- Project Cards -->
+    <section class="projects-section py-5">
+        <div class="container">
+            <div class="row">
+                <!-- Card 1 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img/muestra-p1.png" class="card-img-top" alt="Project 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Ls-Muebles</h5>
+                            <p class="card-text">A website for a furniture store, showcasing products and allowing customers to make online orders.</p>
+                            <a href="https://lautarosnchz.github.io/ls-Muebles/" class="btn btn-primary">View</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img/muestra-p2.png" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h5 class="card-title">E-Wallet</h5>
+                            <p class="card-text">A virtual wallet platform that facilitates secure payments through mobile devices.</p>
+                            <a href="https://lautarosnchz.github.io/Digital_Wallet/" class="btn btn-primary">View</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="img/muestra-p3.png" class="card-img-top" alt="Project 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Big Milas</h5>
+                            <p class="card-text">A restaurant website specializing in "milanesas," featuring the menu and an option to place online orders.</p>
+                            <a href="https://lautarosnchz.github.io/Big-Milas/" class="btn btn-primary">View</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <!-- Carousel Section -->
+        <section class="carousel-section py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Some Projects</h2>
+                <div id="projectsCarousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#projectsCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#projectsCarousel" data-slide-to="1"></li>
+                        <li data-target="#projectsCarousel" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <!-- Carousel Item 1 -->
+                        <div class="carousel-item active">
+                            <a href="https://lautarosnchz.github.io/buscador-autos/"><img src="img/jorgen-hendriksen-5-aK51uc8Q4-unsplash.jpg"d-block w-100" alt="Featured Project 1"></a>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Car-finder</h5>
+                                <p>A car search engine with filters to make your search easier, made mostly in js.</p>
+                            </div>
+                        </div>
+                        <!-- Carousel Item 2 -->
+                        <div class="carousel-item">
+                            <a href="https://lautarosnchz.github.io/Ls-insumos-informarticos"><img src="img/nosotros-laptopwallpaper.jpg" class="d-block w-100" alt="Featured Project 2"></a>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Ls-Computer Inputs</h5>
+                                <p>E-Commerce specialized in laptops</p>
+                            </div>
+                        </div>
+                        <!-- Carousel Item 3 -->
+                        <div class="carousel-item">
+                            <a href="https://lautarosnchz.github.io/AdministradorCitas/"><img src="img/wallpaper_for_a_veterinar_0.jpg" class="d-block w-100" alt="Featured Project 3"></a>
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Administrator Appointments</h5>
+                                <p>Appointment manager for veterinary</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#projectsCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#projectsCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="about-me-section">
+            <div class="container">
+                <div class="row">
+                    <!-- Imagen -->
+                    <div class="col-md-6 about-image">
+                        <img src="img/spartan-warrior-tank-top-design-t-shirt-oliver-walter-spartan-warrior-depicted-wallpaper-style-283507958.webp" alt="Mi foto" class="img-fluid">
+                    </div>
+                    <!-- Texto -->
+                    <div class="col-md-6 about-text">
+                        <h2>About me</h2>
+                        <p>
+I am a developer in training with experience in web development, formally studying programming since 2023. My journey began with web development courses at Coderhouse in 2022, where I learned the basics of HTML, CSS, and JavaScript. Since then, I have continued to hone my skills, focusing on JavaScript, SQL, MongoDB, Express, and Node.js.
+
+My focus is on building efficient and scalable web applications, staying up-to-date with best practices and the latest technologies. I am constantly seeking to expand my tech stack and learn new tools to deliver solid and creative solutions.
+
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contact-section">
+            <div class="container">
+                <div class="row">
+                    <!-- Formulario -->
+                    <div class="col-md-6 contact-form">
+                        <h2>"Do you have an idea or project? Let's work together!</h2>
+                        <p>Fill out the form with your details and let me know how I can help you."</p>
+                        <form action="#" method="POST">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="Your email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" class="form-control" rows="5" placeholder="Describe your idea or project" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send message</button>
+                        </form>
+                    </div>
+                    <!-- Imagen -->
+                    <div class="col-md-6 contact-image">
+                        <img src="img/Default_stoic_marco_aurelio_wallpaper_2.jpg" alt="Let's work together" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        <section class="diagonal-section">
+            <div class="footer-content">
+                <footer>
+                    <p>&copy; 2024 My Portfolio - All rights reserved</p>
+                    <ul class="footer-links">
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">GitHub</a></li>
+                    </ul>
+                </footer>
+            </div>
+        </section>
+        
+
+        
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
