@@ -122,7 +122,7 @@ body {
 .toast {
     opacity: 0;
     transform: translateY(-20px); /* Comienza un poco más arriba */
-    animation: slideIn 0.5s forwards; /* Animación de entrada */
+    animation: slideIn 1s forwards; /* Animación de entrada */
 }
 
 @keyframes slideIn {
@@ -371,3 +371,26 @@ footer {
     height: 100%;
     z-index: -1; /* asegura que las partículas estén detrás del contenido */
 }
+
+.typewriter {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid rgb(24, 105, 255); /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 4s steps(30, end),
+      blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: rgb(255, 255, 255); }
+  }
