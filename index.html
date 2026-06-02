@@ -4,33 +4,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Projects</title>
+    <title data-en="Lautaro Sánchez | Portfolio" data-es="Lautaro Sánchez | Portafolio">Lautaro Sánchez | Portfolio</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <div class="toast" id="welcomeToast" style="position: absolute; top: 20px; right: 20px;" data-delay="5000">
+    <!-- Sticky Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top custom-navbar">
+        <div class="container">
+            <a class="navbar-brand font-weight-bold" href="#">Lautaro <span class="text-accent">Sánchez</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-en="Home" data-es="Inicio">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects" data-en="Projects" data-es="Proyectos">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills-section" data-en="Skills" data-es="Habilidades">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-me" data-en="About" data-es="Sobre mí">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" data-en="Contact" data-es="Contacto">Contact</a>
+                    </li>
+                    <li class="nav-item ml-lg-3 mt-2 mt-lg-0">
+                        <button class="btn btn-outline-accent btn-sm lang-toggle-btn" id="langToggle">
+                            <i class="fas fa-globe mr-1"></i><span id="langText">ES</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Welcome Toast -->
+    <div class="toast" id="welcomeToast" style="position: fixed; top: 80px; right: 20px;" data-delay="5000">
         <div class="toast-header">
-            <strong class="mr-auto">Hey there</strong>
-            <i class="fas fa-folder-open"></i>
-
-
-            <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+            <strong class="mr-auto" data-en="Hey there" data-es="¡Hola!">Hey there</strong>
+            <i class="fas fa-folder-open ml-2"></i>
+            <button type="button" class="ml-2 mb-1 close text-white" data-dismiss="toast" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>
-        <div class="typewriter" class="toast-body">
+        <div class="toast-body typewriter" data-en="Hi, Welcome to my portfolio!" data-es="¡Hola, bienvenido a mi portafolio!">
             Hi, Welcome to my portfolio!
         </div>
     </div>
-
 
     <!-- Main Banner -->
     <header class="hero-section">
@@ -38,150 +67,156 @@
         <div id="particles-js"></div>
 
         <!-- Contenido principal -->
-        <div class="container text-center text-white">
-            <h1 class="hero-title animate-text">Welcome to My Projects</h1>
-            <p class="hero-subtitle">Explore my work as a web developer</p>
+        <div class="container text-center text-white hero-content">
+            <h1 class="hero-title animate-text" data-en="Welcome to My Portfolio" data-es="Bienvenido a mi Portafolio">Welcome to My Portfolio</h1>
+            <p class="hero-subtitle animate-text" data-en="Explore my work as a Full Stack Developer" data-es="Explora mi trabajo como Desarrollador Full Stack">Explore my work as a Full Stack Developer</p>
+            <div class="hero-buttons mt-4 animate-text">
+                <a href="#projects" class="btn btn-gradient btn-lg" data-en="View Projects" data-es="Ver Proyectos">View Projects</a>
+            </div>
         </div>
     </header>
 
-
-    <!-- Project Cards -->
-    <section class="projects-section py-5">
+    <!-- Project Cards Section -->
+    <section id="projects" class="projects-section py-5">
         <div class="container">
+            <h2 class="section-title text-center mb-5" data-en="My Projects" data-es="Mis Proyectos">My Projects</h2>
             <div class="row">
                 <!-- Card 1 -->
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card">
-                        <img src="img/muestra-p1.png" class="card-img-top" alt="Project 1">
+                    <div class="card project-card">
+                        <div class="card-img-wrapper">
+                            <img src="img/muestra-p1.png" class="card-img-top" alt="Ls-Muebles">
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title">Ls-Muebles</h5>
-                            <p class="card-text">A website for a furniture store, showcasing products and allowing
-                                customers to make online orders.</p>
-                            <a href="https://lautarosnchz.github.io/ls-Muebles/" class="btn btn-primary"
-                                target="_blank">View</a>
+                            <p class="card-text" data-en="A website for a furniture store, showcasing products and allowing customers to make online orders." data-es="Un sitio web para una mueblería, que muestra productos y permite a los clientes realizar pedidos en línea.">
+                                A website for a furniture store, showcasing products and allowing customers to make online orders.
+                            </p>
+                            <a href="https://lautarosnchz.github.io/ls-Muebles/" class="btn btn-outline-accent btn-sm" target="_blank" data-en="View" data-es="Ver">View</a>
                         </div>
                     </div>
                 </div>
+
                 <!-- Card 2 -->
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card">
-                        <img src="img/muestra-p2.png" class="card-img-top" alt="Project 2">
+                    <div class="card project-card">
+                        <div class="card-img-wrapper">
+                            <img src="img/muestra-p2.png" class="card-img-top" alt="E-Wallet">
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title">E-Wallet</h5>
-                            <p class="card-text">A virtual wallet platform that facilitates secure payments through
-                                mobile devices. <br>📱</p>
-                            <a href="https://lautarosnchz.github.io/Digital_Wallet/" class="btn btn-primary"
-                                target="_blank">View</a>
+                            <p class="card-text" data-en="A virtual wallet platform that facilitates secure payments through mobile devices. 📱" data-es="Una plataforma de billetera virtual que facilita pagos seguros a través de dispositivos móviles. 📱">
+                                A virtual wallet platform that facilitates secure payments through mobile devices. 📱
+                            </p>
+                            <a href="https://lautarosnchz.github.io/Digital_Wallet/" class="btn btn-outline-accent btn-sm" target="_blank" data-en="View" data-es="Ver">View</a>
                         </div>
                     </div>
                 </div>
+
                 <!-- Card 3 -->
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card">
-                        <img src="img/muestra-p3.png" class="card-img-top" alt="Project 3">
+                    <div class="card project-card">
+                        <div class="card-img-wrapper">
+                            <img src="img/muestra-p3.png" class="card-img-top" alt="Big Milas">
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title">Big Milas</h5>
-                            <p class="card-text">A restaurant website specializing in "milanesas," featuring the menu
-                                and an option to place online orders.</p>
-                            <a href="https://lautarosnchz.github.io/Big-Milas/" class="btn btn-primary"
-                                target="_blank">View</a>
+                            <p class="card-text" data-en="A restaurant website specializing in 'milanesas', featuring the menu and an option to place online orders." data-es="Un sitio web de restaurante especializado en milanesas, que incluye menú y opción de pedidos en línea.">
+                                A restaurant website specializing in "milanesas," featuring the menu and an option to place online orders.
+                            </p>
+                            <a href="https://lautarosnchz.github.io/Big-Milas/" class="btn btn-outline-accent btn-sm" target="_blank" data-en="View" data-es="Ver">View</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Card 4 -->
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card">
-                        <img src="img/nodejs-img.jpg" class="card-img-top" alt="Backend Projects">
+                    <div class="card project-card">
+                        <div class="card-img-wrapper">
+                            <img src="img/nodejs-img.jpg" class="card-img-top" alt="Backend API">
+                        </div>
                         <div class="card-body">
-                            <h5 class="card-title">Backend </h5>
-                            <p class="card-text">API Restful Built using Node.js and Express, tested with Postman, and
-                                connected to MongoDB.</p>
-                            <a href="https://github.com/LautaroSnchz/APIrestful-red-social" class="btn btn-primary"
-                                target="_blank">View</a>
+                            <h5 class="card-title" data-en="Backend API" data-es="API de Backend">Backend API</h5>
+                            <p class="card-text" data-en="RESTful API built using Node.js and Express, tested with Postman, and connected to MongoDB." data-es="API Restful construida con Node.js y Express, testeada con Postman y conectada a MongoDB.">
+                                RESTful API built using Node.js and Express, tested with Postman, and connected to MongoDB.
+                            </p>
+                            <a href="https://github.com/LautaroSnchz/APIrestful-red-social" class="btn btn-outline-accent btn-sm" target="_blank" data-en="View" data-es="Ver">View</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Card 5 -->
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card">
-                        <img src="img/Flux_Dev_a_programming_themed_image_with_a_dark_blue_backgroun_0.jpg"
-                            class="card-img-top" alt="Project 1">
+                    <div class="card project-card">
+                        <div class="card-img-wrapper">
+                            <img src="img/Flux_Dev_a_programming_themed_image_with_a_dark_blue_backgroun_0.jpg" class="card-img-top" alt="C# SQL Integration">
+                        </div>
                         <div class="card-body">
-                            <h5 class="card-title">Conexión C#.net con SQL</h5>
-                            <p class="card-text">Windows Form App with SQL Integration – User Data Capture & Validation.
+                            <h5 class="card-title" data-en="C# .NET & SQL App" data-es="Conexión C# .NET y SQL">C# .NET & SQL App</h5>
+                            <p class="card-text" data-en="Windows Forms Application integrating SQL database. Features data capture, validation, and CRUD operations." data-es="Aplicación Windows Forms con integración SQL Server. Incluye captura de datos, validación y CRUD.">
+                                Windows Forms Application integrating SQL database. Features data capture, validation, and CRUD operations.
                             </p>
-                            <a href="https://github.com/LautaroSnchz/.net-WinForm" class="btn btn-primary"
-                                target="_blank">View</a>
+                            <a href="https://github.com/LautaroSnchz/.net-WinForm" class="btn btn-outline-accent btn-sm" target="_blank" data-en="View" data-es="Ver">View</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Card 6 -->
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card">
-                        <img src="img/what-is-java.webp" class="card-img-top" alt="Project 1">
+                    <div class="card project-card">
+                        <div class="card-img-wrapper">
+                            <img src="img/what-is-java.webp" class="card-img-top" alt="Java MVC Desktop App">
+                        </div>
                         <div class="card-body">
-                            <h5 class="card-title">App de escritorio modelo MVC ventas de TV.</h5>
-                            <p class="card-text">Java Desktop App – TV Sales Management System</p>
-                            <a href="https://github.com/LautaroSnchz/SistemaVentaTelevisores" class="btn btn-primary"
-                                target="_blank">View</a>
+                            <h5 class="card-title" data-en="Java MVC Desktop App" data-es="App Desktop Java MVC">Java MVC Desktop App</h5>
+                            <p class="card-text" data-en="Desktop application developed in Java following the MVC architecture, managing TV sales operations." data-es="Aplicación de escritorio Java con arquitectura MVC para la gestión de inventario y ventas de televisores.">
+                                Desktop application developed in Java following the MVC architecture, managing TV sales operations.
+                            </p>
+                            <a href="https://github.com/LautaroSnchz/SistemaVentaTelevisores" class="btn btn-outline-accent btn-sm" target="_blank" data-en="View" data-es="Ver">View</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Card 7 -->
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card">
-                        <img src="img/gamer-zone.png" class="card-img-top" alt="Project 1">
+                    <div class="card project-card">
+                        <div class="card-img-wrapper">
+                            <img src="img/gamer-zone.png" class="card-img-top" alt="Zona Gamer">
+                        </div>
                         <div class="card-body">
-                            <h5 class="card-title">Zona Gamer</h5>
-                            <p class="card-text">Gaming laptop E-commerce platform featuring integrated latest gaming
-                                news via API.</p><br>
-
-                            <a href="https://gamer-zone-bipw.vercel.app/" class="btn btn-primary"
-                                target="_blank">View</a>
+                            <h5 class="card-title" data-en="Zona Gamer" data-es="Zona Gamer">Zona Gamer</h5>
+                            <p class="card-text" data-en="E-commerce store specializing in gaming laptops, integrated with a real-time gaming news API." data-es="Tienda online de laptops gamer con noticias e información del sector consumidas a través de una API en tiempo real.">
+                                E-commerce store specializing in gaming laptops, integrated with a real-time gaming news API.
+                            </p>
+                            <a href="https://gamer-zone-bipw.vercel.app/" class="btn btn-outline-accent btn-sm" target="_blank" data-en="View" data-es="Ver">View</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Card 8 -->
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <div class="card">
-                        <img src="img/banner-vet-care.png" class="card-img-top" alt="Project 8">
+                    <div class="card project-card">
+                        <div class="card-img-wrapper">
+                            <img src="img/banner-vet-care.png" class="card-img-top" alt="Appointment Manager">
+                        </div>
                         <div class="card-body">
-                            <h5 class="card-title">Administrator Appointments</h5>
-                            <p class="card-text">Appointment manager for veterinary.<br><br>
-
+                            <h5 class="card-title" data-en="Appointment Manager" data-es="Administrador de Citas">Appointment Manager</h5>
+                            <p class="card-text" data-en="A responsive web application to manage veterinary clinic appointments and client patient records." data-es="Aplicación web interactiva para administrar turnos, citas y registros de pacientes en una clínica veterinaria.">
+                                A responsive web application to manage veterinary clinic appointments and client patient records.
                             </p>
-                            <a href="https://administrador-citas-eight.vercel.app/" class="btn btn-primary"
-                                target="_blank">View</a>
+                            <a href="https://administrador-citas-eight.vercel.app/" class="btn btn-outline-accent btn-sm" target="_blank" data-en="View" data-es="Ver">View</a>
                         </div>
                     </div>
                 </div>
-
-
-
-
-
-
-
-            </div>
-
-
-
-
-        </div>
-        </div>
-        </div>
+            </div> <!-- Close row -->
+        </div> <!-- Close container -->
     </section>
 
     <!-- Carousel Section -->
     <section class="carousel-section py-5">
         <div class="container">
-            <h2 class="text-center mb-4">Some Projects</h2>
-            <div id="projectsCarousel" class="carousel slide" data-ride="carousel" data-interval="3000">
+            <h2 class="section-title text-center mb-4" data-en="Featured Projects" data-es="Proyectos Destacados">Featured Projects</h2>
+            <div id="projectsCarousel" class="carousel slide" data-ride="carousel" data-interval="4000">
                 <ol class="carousel-indicators">
                     <li data-target="#projectsCarousel" data-slide-to="0" class="active"></li>
                     <li data-target="#projectsCarousel" data-slide-to="1"></li>
@@ -191,33 +226,34 @@
 
                     <!-- Carousel Item 1 -->
                     <div class="carousel-item active">
-                        <a href="https://kion-crm.vercel.app/signin" target="_blank"><img src="img/KionCrm-Banner.png"
-                                class="d-block w-100" alt="Featured Project 2"></a>
+                        <a href="https://kion-crm.vercel.app/signin" target="_blank">
+                            <img src="img/KionCrm-Banner.png" class="d-block w-100" alt="Kion CRM">
+                        </a>
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>Kion CRM</h5>
-                            <p>Modular CRM for customer and process management</p>
+                            <h5 data-en="Kion CRM" data-es="Kion CRM">Kion CRM</h5>
+                            <p data-en="Modular CRM for customer and process management" data-es="CRM modular para la gestión de clientes y procesos">Modular CRM for customer and process management</p>
                         </div>
                     </div>
 
                     <!-- Carousel Item 2 -->
                     <div class="carousel-item">
-                        <a href="https://lautarosnchz.github.io/buscador-autos/" target="_blank"><img
-                                src="img/jorgen-hendriksen-5-aK51uc8Q4-unsplash.jpg" class="d-block w-100"
-                                alt="Featured Project 1"></a>
+                        <a href="https://lautarosnchz.github.io/buscador-autos/" target="_blank">
+                            <img src="img/jorgen-hendriksen-5-aK51uc8Q4-unsplash.jpg" class="d-block w-100" alt="Car-finder">
+                        </a>
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>Car-finder</h5>
-                            <p>A car search engine with filters to make your search easier, made mostly in js.</p>
+                            <h5 data-en="Car Finder" data-es="Buscador de Autos">Car-finder</h5>
+                            <p data-en="A search engine with advanced filters to find and compare car models." data-es="Un buscador con filtros avanzados para encontrar y comparar modelos de autos.">A search engine with advanced filters to find and compare car models.</p>
                         </div>
                     </div>
 
                     <!-- Carousel Item 3 -->
                     <div class="carousel-item">
-                        <a href="https://lautarosnchz.github.io/Ls-insumos-informarticos" target="_blank"><img
-                                src="img/nosotros-laptopwallpaper.jpg" class="d-block w-100"
-                                alt="Featured Project 3"></a>
+                        <a href="https://lautarosnchz.github.io/Ls-insumos-informarticos" target="_blank">
+                            <img src="img/nosotros-laptopwallpaper.jpg" class="d-block w-100" alt="Ls Insumos">
+                        </a>
                         <div class="carousel-caption d-none d-md-block">
-                            <h5>Ls Insumos</h5>
-                            <p>E-Commerce specialized in laptops.</p>
+                            <h5 data-en="Ls Insumos" data-es="Ls Insumos">Ls Insumos</h5>
+                            <p data-en="E-Commerce specialized in laptops." data-es="E-Commerce especializado en laptops.">E-Commerce specialized in laptops.</p>
                         </div>
                     </div>
                 </div>
@@ -232,89 +268,148 @@
             </div>
         </div>
     </section>
-    <section class="about-me-section">
+
+    <!-- Skills Section -->
+    <section id="skills-section" class="skills-section py-5">
         <div class="container">
-            <div class="row">
+            <h2 class="section-title text-center mb-5" data-en="My Tech Stack" data-es="Mi Stack Tecnológico">My Tech Stack</h2>
+            <div class="row text-center">
+                <!-- Skill 1 -->
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="skill-card">
+                        <i class="fab fa-microsoft skill-icon text-primary"></i>
+                        <h5>.NET / C#</h5>
+                        <span class="skill-level" data-en="Intermediate" data-es="Intermedio">Intermediate</span>
+                    </div>
+                </div>
+                <!-- Skill 2 -->
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="skill-card">
+                        <i class="fab fa-react skill-icon text-info"></i>
+                        <h5>React</h5>
+                        <span class="skill-level" data-en="Advanced" data-es="Avanzado">Advanced</span>
+                    </div>
+                </div>
+                <!-- Skill 3 -->
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="skill-card">
+                        <i class="fas fa-database skill-icon text-secondary"></i>
+                        <h5>SQL Server</h5>
+                        <span class="skill-level" data-en="Intermediate" data-es="Intermedio">Intermediate</span>
+                    </div>
+                </div>
+                <!-- Skill 4 -->
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="skill-card">
+                        <i class="fab fa-node-js skill-icon text-success"></i>
+                        <h5>Node.js</h5>
+                        <span class="skill-level" data-en="Intermediate" data-es="Intermedio">Intermediate</span>
+                    </div>
+                </div>
+                <!-- Skill 5 -->
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="skill-card">
+                        <i class="fas fa-leaf skill-icon text-success"></i>
+                        <h5>MongoDB</h5>
+                        <span class="skill-level" data-en="Intermediate" data-es="Intermedio">Intermediate</span>
+                    </div>
+                </div>
+                <!-- Skill 6 -->
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="skill-card">
+                        <i class="fab fa-java skill-icon text-danger"></i>
+                        <h5>Java</h5>
+                        <span class="skill-level" data-en="Academic" data-es="Académico">Academic</span>
+                    </div>
+                </div>
+                <!-- Skill 7 -->
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="skill-card">
+                        <i class="fab fa-git-alt skill-icon text-warning"></i>
+                        <h5>Git / GitHub</h5>
+                        <span class="skill-level" data-en="Advanced" data-es="Avanzado">Advanced</span>
+                    </div>
+                </div>
+                <!-- Skill 8 -->
+                <div class="col-6 col-md-3 mb-4">
+                    <div class="skill-card">
+                        <i class="fab fa-html5 skill-icon text-danger"></i>
+                        <h5>Frontend Dev</h5>
+                        <span class="skill-level" data-en="Advanced" data-es="Avanzado">Advanced</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about-me" class="about-me-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
                 <!-- Imagen -->
-                <div class="col-md-6 about-image">
-                    <img src="img/ls-dev.jpeg" alt="Mi foto" class="img-fluid">
+                <div class="col-md-5 about-image mb-4 mb-md-0">
+                    <div class="about-img-wrapper">
+                        <img src="img/ls-dev.jpeg" alt="Lautaro Sánchez" class="img-fluid rounded-glow">
+                    </div>
                 </div>
                 <!-- Texto -->
-                <div class="col-md-6 about-text">
-                    <h2>About me</h2>
-                    <p>
-                        I'm a Full Stack Developer focused on .NET and React, committed to building scalable and
-                        maintainable solutions. Since 2022, I've been gaining hands-on experience through personal and
-                        collaborative projects, applying best practices in architecture, debugging, and intuitive UI
-                        design.
-                        My tech stack includes C#/.NET, SQL Server, React, Vite, Node.js, and MongoDB. I also learned
-                        Java during my university studies and continue to deepen my understanding of DevOps practices.
-                        Day by day, I expand my knowledge of software architecture and development workflows, aiming to
-                        master both desktop and web applications.
-                        I enjoy explaining technical concepts through geeky and visual analogies, which helps me
-                        communicate effectively with both technical and non-technical teams. My goal is to keep growing
-                        as a SSR developer, delivering solid, creative solutions and contributing to collaborative
-                        environments.
+                <div class="col-md-7 about-text">
+                    <h2 class="section-title mb-4 text-left" data-en="About me" data-es="Sobre mí">About me</h2>
+                    <p data-en="I'm a Full Stack Developer focused on .NET and React, committed to building scalable and maintainable solutions. Since 2022, I've been gaining hands-on experience through personal and collaborative projects, applying best practices in architecture, debugging, and intuitive UI design. My tech stack includes C#/.NET, SQL Server, React, Vite, Node.js, and MongoDB. I also learned Java during my university studies and continue to deepen my understanding of DevOps practices. Day by day, I expand my knowledge of software architecture and development workflows, aiming to master both desktop and web applications. I enjoy explaining technical concepts through geeky and visual analogies, which helps me communicate effectively with both technical and non-technical teams. My goal is to keep growing as a SSR developer, delivering solid, creative solutions and contributing to collaborative environments." data-es="Soy Desarrollador Full Stack enfocado en .NET y React, comprometido con la creación de soluciones escalables y mantenibles. Desde 2022, he adquirido experiencia práctica a través de proyectos personales y colaborativos, aplicando mejores prácticas de arquitectura, depuración y diseño de interfaz intuitivo. Mi stack tecnológico incluye C#/.NET, SQL Server, React, Vite, Node.js y MongoDB. También aprendí Java durante mis estudios universitarios y continúo profundizando en prácticas DevOps. Día a día, expando mis conocimientos en arquitectura de software y flujos de desarrollo, con el objetivo de dominar aplicaciones tanto de escritorio como web. Disfruto explicar conceptos técnicos mediante analogías visuales y geek, lo que me ayuda a comunicarme eficazmente con equipos técnicos y no técnicos. Mi meta es seguir creciendo como desarrollador Ssr, entregando soluciones sólidas y creativas y aportando en entornos colaborativos.">
+                        I'm a Full Stack Developer focused on .NET and React, committed to building scalable and maintainable solutions. Since 2022, I've been gaining hands-on experience through personal and collaborative projects, applying best practices in architecture, debugging, and intuitive UI design. My tech stack includes C#/.NET, SQL Server, React, Vite, Node.js, and MongoDB. I also learned Java during my university studies and continue to deepen my understanding of DevOps practices. Day by day, I expand my knowledge of software architecture and development workflows, aiming to master both desktop and web applications. I enjoy explaining technical concepts through geeky and visual analogies, which helps me communicate effectively with both technical and non-technical teams. My goal is to keep growing as a SSR developer, delivering solid, creative solutions and contributing to collaborative environments.
                     </p>
                 </div>
             </div>
         </div>
     </section>
-    <section class="contact-section">
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section py-5">
         <div class="container">
             <div class="row">
                 <!-- Formulario -->
                 <div class="col-md-6 contact-form">
-                    <h2>"Do you have an idea or project? Let's work together!</h2>
-                    <p>Fill out the form with your details and let me know how I can help you."</p>
-                    <form action="#" method="POST">
+                    <h2 class="mb-3" data-en="Do you have an idea or project? Let's work together!" data-es="¿Tienes una idea o proyecto? ¡Trabajemos juntos!">Do you have an idea or project? Let's work together!</h2>
+                    <p class="mb-4" data-en="Fill out the form with your details and let me know how I can help you." data-es="Completa el formulario con tus datos y cuéntame cómo puedo ayudarte.">Fill out the form with your details and let me know how I can help you.</p>
+                    <form action="#" method="POST" id="contactForm">
                         <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" class="form-control" placeholder="Your Name"
-                                required>
+                            <label for="name" data-en="Name" data-es="Nombre">Name</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" data-placeholder-en="Your Name" data-placeholder-es="Tu Nombre" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" class="form-control" placeholder="Your email"
-                                required>
+                            <label for="email" data-en="Email" data-es="Correo electrónico">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="Your email" data-placeholder-en="Your email" data-placeholder-es="Tu correo electrónico" required>
                         </div>
                         <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" class="form-control" rows="5"
-                                placeholder="Describe your idea or project" required></textarea>
+                            <label for="message" data-en="Message" data-es="Mensaje">Message</label>
+                            <textarea id="message" name="message" class="form-control" rows="5" placeholder="Describe your idea or project" data-placeholder-en="Describe your idea or project" data-placeholder-es="Describe tu idea o proyecto" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Send message</button>
+                        <button type="submit" class="btn btn-gradient btn-lg btn-block" data-en="Send Message" data-es="Enviar Mensaje">Send Message</button>
                     </form>
                 </div>
                 <!-- Imagen -->
-                <div class="col-md-6 contact-image">
-                    <img src="img/cowork.jpg" alt="Let's work together" class="img-fluid" ;">
+                <div class="col-md-6 contact-image d-flex align-items-center justify-content-center">
+                    <img src="img/cowork.jpg" alt="Let's work together" class="img-fluid rounded-glow mt-4 mt-md-0">
                 </div>
             </div>
         </div>
     </section>
 
-
-    <!-- Diagonal Section -->
+    <!-- Diagonal Section / Footer -->
     <section class="diagonal-section">
-        <div class="footer-content">
+        <div class="footer-content w-100">
             <footer>
-
                 <div id="particles-footer"></div>
-
-                <p>&copy; 2025 My Portfolio - </p>
+                <p class="mb-2" data-en="&copy; 2026 Lautaro Sánchez - All Rights Reserved." data-es="&copy; 2026 Lautaro Sánchez - Todos los derechos reservados.">&copy; 2026 Lautaro Sánchez - All Rights Reserved.</p>
                 <ul class="footer-links">
-                    <li><a href="https://wa.me/543492629151">Contact</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="https://www.linkedin.com/in/lautaro-s%C3%A0nchez-/">LinkedIn</a></li>
-                    <li><a href="https://github.com/LautaroSnchz">GitHub</a></li>
+                    <li><a href="#contact" data-en="Contact" data-es="Contacto">Contact</a></li>
+                    <li><a href="#projects" data-en="Projects" data-es="Proyectos">Projects</a></li>
+                    <li><a href="https://www.linkedin.com/in/lautaro-s%C3%A0nchez-/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://github.com/LautaroSnchz" target="_blank">GitHub</a></li>
                 </ul>
             </footer>
         </div>
     </section>
-
-
-
 
     <script src="particles.js-master/particles.js-master/particles.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
