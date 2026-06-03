@@ -47,7 +47,12 @@ function setLanguage(lang) {
     // Cambiar texto de los elementos correspondientes
     const elements = document.querySelectorAll("[data-en][data-es]");
     elements.forEach(el => {
-        el.innerHTML = el.getAttribute(`data-${lang}`);
+        if (el.classList.contains("typewriter")) {
+            const text = el.getAttribute(`data-${lang}`);
+            runTypewriter(el, text);
+        } else {
+            el.innerHTML = el.getAttribute(`data-${lang}`);
+        }
     });
 
     // Cambiar placeholders de inputs y textareas
@@ -62,6 +67,35 @@ function setLanguage(lang) {
     if (langText) {
         langText.textContent = lang === "es" ? "EN" : "ES";
     }
+}
+
+// Función para el efecto de máquina de escribir con cursor (caret)
+function runTypewriter(element, text) {
+    if (element.typewriterTimeout) {
+        clearTimeout(element.typewriterTimeout);
+    }
+    
+    element.innerHTML = "";
+    
+    const textSpan = document.createElement("span");
+    const caretSpan = document.createElement("span");
+    caretSpan.className = "typewriter-caret";
+    caretSpan.textContent = "|";
+    
+    element.appendChild(textSpan);
+    element.appendChild(caretSpan);
+    
+    let i = 0;
+    const speed = 50; // milisegundos por letra
+    
+    function type() {
+        if (i < text.length) {
+            textSpan.textContent += text.charAt(i);
+            i++;
+            element.typewriterTimeout = setTimeout(type, speed);
+        }
+    }
+    type();
 }
 
 // Control del Scroll de la Navbar

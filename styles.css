@@ -162,6 +162,19 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--text-secondary);
 }
 
+/* Typewriter Caret */
+.typewriter-caret {
+    color: var(--accent);
+    font-weight: bold;
+    margin-left: 2px;
+    animation: typewriter-blink 0.75s step-end infinite;
+}
+
+@keyframes typewriter-blink {
+    from, to { color: transparent }
+    50% { color: var(--accent) }
+}
+
 @keyframes slideIn {
     to {
         opacity: 1;
