@@ -347,24 +347,24 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 500;
 }
 
-.btn-card-action {
-    background: rgba(255, 255, 255, 0.04);
+.btn-card-view {
+    background: var(--accent-gradient);
     color: #ffffff !important;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: none;
     border-radius: 8px;
-    padding: 10px 16px;
-    font-size: 0.9rem;
-    font-weight: 500;
+    padding: 6px 16px;
+    font-size: 0.8rem;
+    font-weight: 600;
     transition: all 0.3s ease;
     text-align: center;
     text-decoration: none !important;
+    align-self: flex-start;
+    box-shadow: 0 4px 12px rgba(0, 229, 255, 0.25);
 }
 
-.btn-card-action:hover {
-    background: var(--accent-gradient);
-    border-color: transparent;
-    box-shadow: 0 4px 15px rgba(0, 229, 255, 0.3);
-    transform: translateY(-1px);
+.btn-card-view:hover {
+    box-shadow: 0 6px 16px rgba(0, 229, 255, 0.45);
+    transform: translateY(-1.5px);
 }
 
 /* Carousel Section */
